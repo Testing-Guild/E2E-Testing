@@ -1,0 +1,25 @@
+{
+  "name": "e2e-testing",
+  "version": "1.0.0",
+  "description": "E2E testing simulates real user journeys to confirm an application functions as intended, from start to finish. It checks if all the software parts work together seamlessly, mimicking real-world use.",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "test:js": ""
+  },
+  "keywords": [
+    "e2e",
+    "e2e-testing",
+    "e2e-test"
+  ],
+  "author": "Mahdi",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
