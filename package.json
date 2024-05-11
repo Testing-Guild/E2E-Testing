@@ -4,8 +4,8 @@
   "description": "E2E testing simulates real user journeys to confirm an application functions as intended, from start to finish. It checks if all the software parts work together seamlessly, mimicking real-world use.",
   "main": "index.js",
   "scripts": {
-    "test": "",
-    "test:js": ""
+    "test": "npx cypress run",
+    "cy:open": "npx cypress open"
   },
   "keywords": [
     "e2e",
