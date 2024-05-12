@@ -15,8 +15,12 @@ const dataPath = path.join(__dirname, "../db/data.json");
 route.post<SignUpUser>(
   "/signup",
   async (req: Request<SignUpUser>, res: Response) => {
+      console.log("req.body:", req.body);
     try {
       const { username, password } = req.body as SignUpUser;
+      console.log("username:", username);
+      console.log("password:", password);
+
       // Validate user input:
       if (!username || !password) {
         return res
@@ -38,6 +42,8 @@ route.post<SignUpUser>(
         .status(201)
         .json({ success: true, message: "User Created Successfully!" });
     } catch (error) {
+      console.log("error:", error);
+
       res
         .status(500)
         .json({ success: false, message: "Internal Server Error" });

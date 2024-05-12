@@ -22,6 +22,7 @@ button?.addEventListener("click", async (e) => {
     return;
   }
   const response = await postData("/signup", { username, password });
+  
   if (response.success) {
     alert("User Created Successfully!");
   } else {

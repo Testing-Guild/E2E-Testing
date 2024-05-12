@@ -7,9 +7,9 @@
   </head>
   <body>
     <div class="container">
-      <form action="/signup" method="post">
-        <input type="text" data-cy="username" class="username" />
-        <input type="password" data-cy="password" class="password" />
+      <form action="/signup" method="POST" style="display: flex;flex-direction: column;">
+        <input type="text" data-cy="username" class="username" placeholder="username"/>
+        <input type="password" data-cy="password" class="password" placeholder="password"/>
         <button type="submit" class="btn_submit">Submit</button>
       </form>
     </div>
