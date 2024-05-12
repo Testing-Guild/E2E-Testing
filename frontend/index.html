@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E2E  - Signup Page</title>
-
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E2E - Signup Page</title>
+  </head>
+  <body>
     <div class="container">
-        <form action="/signup" method="post">
-            <input type="text" data-cy="username">
-            <input type="password" data-cy="password">
-            <button type="submit">Submit</button>
-        </form>
+      <form action="/signup" method="post">
+        <input type="text" data-cy="username" data-name="username" />
+        <input type="password" data-cy="password" data-name="password" />
+        <button type="submit">Submit</button>
+      </form>
     </div>
-</body>
+    <script src="./script.ts"></script>
+  </body>
 </html>
