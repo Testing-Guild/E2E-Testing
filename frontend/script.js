@@ -69,7 +69,7 @@ button === null || button === void 0 ? void 0 : button.addEventListener("click",
                     alert("Please Enter Both Username or Password");
                     return [2 /*return*/];
                 }
-                return [4 /*yield*/, postData("/signup", {
+                return [4 /*yield*/, postData("http://localhost:3000/signup", {
                         username: username,
                         password: password,
                     })];
