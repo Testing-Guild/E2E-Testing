@@ -10,6 +10,7 @@ async function postData(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
+  console.log("response:", response);
   return await response.json();
 }
 
@@ -21,8 +22,11 @@ button?.addEventListener("click", async (e) => {
     alert("Please Enter Both Username or Password");
     return;
   }
-  const response = await postData("/signup", { username, password });
-  
+  const response = await postData("http://localhost:3000/signup", {
+    username: username,
+    password: password,
+  });
+
   if (response.success) {
     alert("User Created Successfully!");
   } else {
