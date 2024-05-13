@@ -8,8 +8,7 @@ interface SignUpUser {
   password: string;
 }
 interface Database {
-  username: string;
-  password: string;
+  user: { username: string; password: string };
 }
 const dataPath = path.join(__dirname, "../db/data.json");
 route.post<SignUpUser>(
@@ -24,7 +23,7 @@ route.post<SignUpUser>(
           .json({ success: false, message: "Missing username or password" });
       }
       const existingData = JSON.parse(readFileSync(dataPath, "utf8"));
-      if (existingData.find((user: Database) => user.username === username)) {
+      if (existingData.find((db: Database) => db.user.username === username)) {
         return res
           .status(409)
           .json({ success: false, message: "Username already exists" });
